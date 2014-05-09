@@ -50,6 +50,7 @@ qiime_get_obs_stats = {
 
 qiime_get_table_stats = {
     produce("library_stats.txt"){
+        output.dir = "qiime_otu_dir"
         exec "print_biom_table_summary.py -i $input.biom -o $output","small_qiime_script"
     }
 }
